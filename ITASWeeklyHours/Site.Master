@@ -14,10 +14,11 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form runat="server">
+    <form runat="server" id="form1">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -39,26 +40,40 @@
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                <a class="navbar-brand" runat="server" href="Home.aspx">ITAS</a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="Home.aspx">Home</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact & Contributers</a></li>
+                    </ul>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link" ID="LinkButtonReport" runat="server" OnClick="LinkButtonReport_OnClick" Font-Bold="True" ForeColor="#6699FF">Generate Report</asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link" ID="LinkButtonLogIn" runat="server" OnClick="LinkButtonLogIn_OnClick" Font-Bold="True" ForeColor="#CC99FF">LogIn</asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link" ID="LinkButtonSignUp" runat="server" OnClick="LinkButtonSignUp_OnClick" Font-Bold="True" ForeColor="#33CCFF">SignUp</asp:LinkButton>
+                        </li>
                     </ul>
                 </div>
             </div>
+            <a href="Bundle.config">Bundle.config</a>
         </nav>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <center>
+                <p>&copy; <%: DateTime.Now.ToShortDateString() %> - <b>Made by Mahesh Singh with ❤️</b></p>
+                </center>
             </footer>
         </div>
     </form>

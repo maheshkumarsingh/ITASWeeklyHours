@@ -13,5 +13,17 @@ namespace ITASWeeklyHours
         {
 
         }
+        protected void LinkButtonReport_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Report.aspx");
+        }
+        protected void LinkButtonLogIn_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Report.aspx");
+        }
+        protected void LinkButtonSignUp_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Report.aspx");
+        }
     }
 }
