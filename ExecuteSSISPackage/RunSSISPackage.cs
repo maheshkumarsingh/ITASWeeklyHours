@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace ExecuteSSISPackage
 {
-    internal class RunSSISPackage
+    public class RunSSISPackage
     {
-        protected void ExecuteSSISPackage()
+        public void ExecuteSSISPackage()
         {
-
         }
     }
 }
