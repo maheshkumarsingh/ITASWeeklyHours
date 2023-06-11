@@ -45,6 +45,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.SqlServer.ManagedDTS\v4.0_15.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.ManagedDTS.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -268,7 +272,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ExecuteSSISPackage\ExecuteSSISPackage.csproj">
-      <Project>{364d1452-8693-4632-828d-a78f7ac94b1f}</Project>
+      <Project>{51beeb47-ef4f-48ce-bc11-6760362af0ac}</Project>
       <Name>ExecuteSSISPackage</Name>
     </ProjectReference>
   </ItemGroup>

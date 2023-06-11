@@ -13,10 +13,10 @@ namespace ITASWeeklyHours
         {
 
         }
-        protected void LinkButtonGenerateReport_Click(object sender, EventArgs e)
+        protected void ButtonLinkGenerate_Click(object sender, EventArgs e)
         {
-            RunSSISPackage runSSISPackage = new RunSSISPackage();
-            runSSISPackage.ExecuteSSISPackage();
+            ExecuteSSIS executeSSIS = new ExecuteSSIS();
+            executeSSIS.RunSSISPackage();
         }
     }
 }

@@ -64,7 +64,7 @@
                     </ul>
                 </div>
             </div>
-            <a href="Bundle.config">Bundle.config</a>
+            <%--<a href="Bundle.config">Bundle.config</a>--%>
         </nav>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">

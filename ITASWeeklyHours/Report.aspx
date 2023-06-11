@@ -16,6 +16,10 @@
                             <asp:ListItem>Last Week Date</asp:ListItem>
                             <asp:ListItem>any more suggestion you have dumb mind :|</asp:ListItem>
                         </asp:BulletedList>
+                        <div class="row">
+                            <asp:Button CssClass="btn btn-lg btn-block btn-success" ID="ButtonLinkGenerate" runat="server" Text="Generate" OnClick="ButtonLinkGenerate_Click"/>
+                        </div>
+
                     </div>
                 </div>
             </div>
